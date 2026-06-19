@@ -1023,8 +1023,23 @@ function getAcknowledgement(blockName) {
   ];
   return acks[Math.floor(Math.random() * acks.length)];
 }
+async function enviarParaSupabase() {
+  const { error } = await supabaseClient
+    .from("briefings")
+    .insert({
+      respostas: answers
+    });
 
+  if (error) {
+    console.error("Erro Supabase:", error);
+    alert("Erro ao salvar no Supabase.");
+    return;
+  }
+
+  alert("Briefing salvo com sucesso!");
+}
 function finishConversation() {
+ enviarParaSupabase();
   document.getElementById('userInput').disabled = true;
   document.querySelector('.btn-send').disabled = true;
   updateStatus('✦ Conversa concluída — Pronto para gerar o documento estratégico');
