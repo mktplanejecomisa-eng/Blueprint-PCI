@@ -5,7 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planeje com Isa — Estrategista de Marca</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .tags,
+  .choices,
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+}
+ <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
